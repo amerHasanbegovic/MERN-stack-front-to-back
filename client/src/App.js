@@ -33,7 +33,7 @@ if(localStorage.jwtToken){
 
     //TODO: Clear current Profile
 
-    //Rediret to first page
+    //Rediret to login page if token is expired
     window.location.href="/login";
   }
 }

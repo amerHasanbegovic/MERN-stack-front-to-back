@@ -60,4 +60,5 @@ export const logoutUser = () => dispatch =>{
   setAuthToken(false) //function is looking for true value
   //set current user to an empty object {}, which will set isAuthenticated to false
   dispatch(setCurrentUser({}))
+  window.location.href="/login"
 }
