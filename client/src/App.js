@@ -15,6 +15,9 @@ import Dashboard from './components/dashboard/Dashboard'
 import store from './store'
 import PrivateRoute from './components/common/privateRoute'
 import CreateProfile from './components/create-profile/CreateProfile'
+import EditProfile from './components/edit-profile/EditProfile'
+import AddExperience from './components/ExpAndEdu/AddExperience'
+import AddEducation from './components/ExpAndEdu/AddEducation'
 
 // if page is reloaded user doesnt stay logged in, logic to keep logged in
 // check for token
@@ -55,7 +58,32 @@ class App extends Component {
                 <PrivateRoute exact path='/dashboard' component={Dashboard} />
               </Switch>
               <Switch>
-                <PrivateRoute exact path='/create-profile' component={CreateProfile} />
+                <PrivateRoute
+                  exact
+                  path='/create-profile'
+                  component={CreateProfile}
+                />
+              </Switch>
+              <Switch>
+                <PrivateRoute
+                  exact
+                  path='/edit-profile'
+                  component={EditProfile}
+                />
+              </Switch>
+              <Switch>
+                <PrivateRoute
+                  exact
+                  path='/add-experience'
+                  component={AddExperience}
+                />
+              </Switch>
+              <Switch>
+                <PrivateRoute
+                  exact
+                  path='/add-education'
+                  component={AddEducation}
+                />
               </Switch>
             </div>
             <Footer />

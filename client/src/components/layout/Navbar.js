@@ -16,11 +16,11 @@ class Navbar extends Component {
 
     const authLinks = (
       <ul className='navbar-nav ml-auto'>
-        {/* <li className='nav-item'>
-          <Link className='nav-link' to='/register'>
-            Sign Up
+        <li className='nav-item'>
+          <Link className='nav-link' to='/dashboard'>
+            Dashboard
           </Link>
-        </li> */}
+        </li>
         <li className='nav-item'>
           <a className='nav-link' style={{cursor: 'pointer'}} onClick={this.handleLogout}>
             <img
