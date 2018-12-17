@@ -233,7 +233,7 @@ class CreateProfile extends Component {
                 />
 
                 <TextFieldGroup
-                  placeholder='GitHub Username'
+                  placeholder='Github Username'
                   name='githubusername'
                   value={this.state.githubusername}
                   onChange={this.onChange}

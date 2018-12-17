@@ -22,7 +22,7 @@ class Navbar extends Component {
           </Link>
         </li>
         <li className='nav-item'>
-          <a className='nav-link' style={{cursor: 'pointer'}} onClick={this.handleLogout}>
+          <Link className='nav-link' to="/login" style={{cursor: 'pointer'}} onClick={this.handleLogout}>
             <img
               src={user.avatar}
               alt={user.name}
@@ -30,7 +30,7 @@ class Navbar extends Component {
               style={{ width: '25px', marginRight: '5px', borderRadius: '50%'}}
             />
             Log out
-          </a>
+          </Link>
         </li>
       </ul>
     )
