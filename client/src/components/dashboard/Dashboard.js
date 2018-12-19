@@ -31,9 +31,12 @@ class Dashboard extends Component {
         dashboardContent = (
           <div>
             <p className='lead text-muted'>
-              Welcome <Link to={`/profile/${profile.handle}`} style={{color: 'red'}}>{user.name}</Link>
+              Welcome{' '}
+              <Link to={`/profile/${profile.handle}`} style={{ color: 'red' }}>
+                {user.name}
+              </Link>
             </p>
-            
+
             <ProfileActions />
             <Experience experience={profile.experience} />
             {/* passing experience and education arrays to components */}
@@ -44,6 +47,7 @@ class Dashboard extends Component {
               Delete Account
             </button>
           </div>
+
         )
       } else {
         // User is logged in but no profile
