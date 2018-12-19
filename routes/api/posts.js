@@ -84,7 +84,7 @@ router.delete(
           // delete post
           post.remove().then(() => res.json({ success: true }))
         })
-        .catch(err => res.status.json({ post: 'Post not found' }))
+        .catch(err => res.status(404).json({ post: 'Post not found' }))
     })
   }
 )
@@ -163,7 +163,7 @@ router.delete(
 )
 
 // @route    POST request to api/posts/comments/:id
-// @desc     Add comments on post
+// @desc     Add comment to post
 // @access   Private
 router.post(
   '/comments/:id',
@@ -181,9 +181,9 @@ router.post(
       .then(post => {
         const newComment = {
           text: req.body.text,
-          user: req.body.id,
           name: req.body.name,
-          avatar: req.body.avatar
+          avatar: req.body.avatar,
+          user: req.user.id
         }
 
         post.comments.unshift(newComment)
